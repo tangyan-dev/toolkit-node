@@ -1,0 +1,39 @@
+{
+  "name": "@tangyansoft/toolkit-node",
+  "version": "0.1.0",
+  "description": "",
+  "author": "The tangyan soft Team (https://tangyan.dev)",
+  "scripts": {
+    "dev": "node install.js && concurrently \"babel ./src -w --out-dir ./dist\"",
+    "build": "rm -rf dist && npx babel ./src --out-dir ./dist",
+    "prepublish": "npm run build",
+    "install": "node check.js"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "@babel/runtime": "^7.15.3",
+    "@tangyansoft/toolkit-common": "0.1.0",
+    "archiver": "^5.3.0",
+    "dir-compare": "^3.3.0",
+    "file-compare": "0.0.2",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "slash": "^3.0.0",
+    "unzipper": "^0.10.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-preset-minify": "^0.5.1",
+    "concurrently": "^6.2.1",
+    "core-js": "^3.16.2",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "typescript": "^4.3.5"
+  }
+}
